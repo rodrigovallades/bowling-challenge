@@ -193,6 +193,7 @@ class Bowling {
     bowlGameEl = document.getElementById('bowling')
     playBtn = document.getElementById('bowling-btn')
     playBtn.addEventListener('click', play, false)
+    renderGame()
   };
 
   function play() {
