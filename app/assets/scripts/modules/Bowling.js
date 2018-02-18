@@ -16,6 +16,7 @@ class Bowling {
   }
 
   roll() {
+    if (this.isFinished()) return
     let rollNumber = this.randomRoll(this.remainingPins)
     this.remainingPins = this.frames[0].roll(rollNumber)
   }
@@ -26,6 +27,10 @@ class Bowling {
 
   getRemaining() {
     return this.remainingPins
+  }
+
+  setRemaining(remaining) {
+    this.remainingPins = remaining
   }
 
   getScore() {
@@ -57,6 +62,11 @@ class Bowling {
 
   getFrames() {
     return this.frames
+  }
+
+  reset() {
+    this.init()
+    this.setRemaining(10)
   }
 
   render() {

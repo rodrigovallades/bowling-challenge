@@ -1,32 +1,43 @@
 import Bowling from './modules/Bowling'
 
 (function() {
-  var bowlGameEl,
-      playBtn
+  var bowlingGameEl,
+      playBtn,
+      resetBtn
 
   const bowlingGame = new Bowling()
 
   function renderGame() {
-    bowlGameEl.innerHTML = bowlingGame.render()
+    bowlingGameEl.innerHTML = bowlingGame.render()
   };
 
   function onLoad() {
     bowlingGame.init()
-    bowlGameEl = document.getElementById('bowling')
-    playBtn = document.getElementById('bowling-btn')
+    bowlingGameEl = document.getElementById('bowling')
+    playBtn = document.getElementById('play-btn')
+    resetBtn = document.getElementById('reset-btn')
     playBtn.addEventListener('click', play, false)
+    resetBtn.addEventListener('click', reset, false)
     renderGame()
   };
 
   function play() {
-    bowlingGame.roll()
-    renderGame()
+    bowlingGame.roll();
+    renderGame();
 
-    if (bowlingGame.isFinished()) onFinish()
+    if (bowlingGame.isFinished()) {
+        onFinish();
+    }
+  };
+
+  function reset() {
+    bowlingGame.reset()
+    renderGame()
+    if (playBtn.classList.contains('btn--disabled')) playBtn.classList.remove('btn--disabled')
   };
 
   function onFinish() {
-    playBtn.remove()
+    playBtn.classList.add('btn--disabled')
   };
 
   document.addEventListener('DOMContentLoaded', onLoad)
