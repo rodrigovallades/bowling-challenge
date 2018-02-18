@@ -1,41 +1,5 @@
-body {
-  background-color: #ccc;
-}
-
-.frames {}
-
-  .frames__frame {
-    width: 70px;
-    height: 70px;
-    float: left;
-    position: relative;
-    border: 1px solid black;
-    border-right-width: 0;
-  }
-    .frames__frame:last-child {
-      border-right-width: 1px;
-    }
-    .frames__frame__roll {
-      text-align: center;
-      line-height: 35px;
-      position: absolute;
-      width: 35px;
-      height: 35px;
-      top: 0;
-    }
-    .frames__frame__score {
-      text-align: center;
-      line-height: 35px;
-      position: absolute;
-      width: 70px;
-      height: 35px;
-      bottom: 0;
-    }
-      .frames__frame__roll--1 {
-        left: 0;
-      }
-      .frames__frame__roll--2 {
-        right: 0;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
-      }
+@import "normalize.css";
+@import "base/_variables";
+@import "base/_mixins";
+@import "base/_global";
+@import "modules/_frames";

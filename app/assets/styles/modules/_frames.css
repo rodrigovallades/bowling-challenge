@@ -1,0 +1,39 @@
+.frames {
+
+  &__frame {
+    width: 70px;
+    height: 70px;
+    float: left;
+    position: relative;
+    border: 1px solid black;
+    border-right-width: 0;
+  }
+  &__frame:last-child {
+    border-right-width: 1px;
+  }
+  &__frame__roll {
+    text-align: center;
+    line-height: 35px;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 0;
+  }
+  &__frame__score {
+    text-align: center;
+    line-height: 35px;
+    position: absolute;
+    width: 70px;
+    height: 35px;
+    bottom: 0;
+  }
+
+  &__frame__roll--1 {
+    left: 0;
+  }
+  &__frame__roll--2 {
+    right: 0;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+}
