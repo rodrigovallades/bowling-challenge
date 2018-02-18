@@ -8,6 +8,7 @@
 - ES6 + Babel: modules, classes and constructors, template strings, spread operator, arrow functions;
 - PostCSS: mixins, variables, imports, nesting;
 - BEM: CSS naming is following (block__element--modifier) pattern.
+- Development: Browsersync for hot-reloading
 - Build: Webpack + Gulp + Babel + PostCSS
 - No Bootstrap used!
 - No jQuery used!
