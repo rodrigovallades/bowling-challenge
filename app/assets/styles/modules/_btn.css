@@ -8,6 +8,19 @@
   border-radius: $borderRadius;
   cursor: pointer;
 
+  &--icon::before {
+    font-family: "Font Awesome 5 Free";
+    margin-right: 10px;
+  }
+
+  &--play::before {
+    content: "\f436";
+  }
+
+  &--reset::before {
+    content: "\f2ea";
+  }
+
   &--disabled {
     opacity: 0.4;
     cursor: not-allowed;
