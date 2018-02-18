@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #333;
+  background-color: #ddd
 }
 
 * {
@@ -8,5 +9,5 @@ body {
 }
 
 a {
-  color: $mainOrange;
+  color: $mainAccent;
 }

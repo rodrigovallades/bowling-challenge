@@ -1,0 +1,28 @@
+.btn {
+  background-color: $mainAccent;
+  color: #FFF;
+  text-decoration: none;
+  padding: .75rem 1.2rem;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--accent {
+    background-color: $mainAccent;
+    border-color: $mainAccent;
+  }
+
+  &--large {
+    padding: 1.1rem 1.9rem;
+
+    @mixin atSmall {
+      font-size: 1.25rem;
+    }
+  }
+
+}

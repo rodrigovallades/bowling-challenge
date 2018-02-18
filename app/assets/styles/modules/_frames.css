@@ -1,4 +1,6 @@
 .frames {
+  text-align: center;
+
 
   &__frame {
     width: 70px;
@@ -6,10 +8,11 @@
     float: left;
     position: relative;
     border: 1px solid black;
-    border-right-width: 0;
+    margin-right: 10px;
+    border-radius: 5px;
   }
   &__frame:last-child {
-    border-right-width: 1px;
+    margin-right: 0;
   }
   &__frame__roll {
     text-align: center;
