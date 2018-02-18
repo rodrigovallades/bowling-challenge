@@ -1,6 +1,7 @@
 class Frame{
 
   constructor() {
+    this.id = 0
     this.rolls = []
     this.score = 0
     this.current = false
@@ -99,6 +100,7 @@ class Frame{
 
     return `
       <div class="frames__frame ${this.isFinished() ? 'frames__frame--finished' : ''}">
+        <div class="frames__frame__title">${this.id}</div>
         <div class="frames__frame__roll frames__frame__roll--1">${roll1String}</div>
         <div class="frames__frame__roll frames__frame__roll--2">${roll2String}</div>
         <div class="frames__frame__score">${scoreString}</div>

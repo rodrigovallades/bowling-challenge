@@ -45,6 +45,7 @@ class Bowling {
       frame = new Frame()
       // initiate first frame as current
       if (i === 0) frame.setCurrent(true)
+      frame.id = i+1
       return frame
     })
 

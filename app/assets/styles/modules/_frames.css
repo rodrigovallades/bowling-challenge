@@ -1,6 +1,7 @@
 .frames {
   text-align: center;
   font-size: 0;
+  margin-top: 20px;
 
   &__frame {
     width: 80px;
@@ -10,8 +11,18 @@
     border: 1px solid $subtleGrey;
     background-color: #fff;
     margin-right: 10px;
+    margin-top: 40px;
     border-radius: 5px;
     font-size: 1.2rem;
+
+    &__title {
+      position: absolute;
+      top: -40px;
+      height: 30px;
+      line-height: 30px;
+      left: 0;
+      right: 0;
+    }
 
     &__score {
       color: $subtleGrey;
