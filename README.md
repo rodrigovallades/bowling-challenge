@@ -17,7 +17,7 @@ The build of this application was output by **Webpack + Babel + PostCSS + Gulp**
 
 1. **npm install** (download dependencies);
 2. **gulp watch** (for development: creates a 'temp' folder and auto-starts browser on localhost:3000);
-3. **gulp build** (for distribution: creates a 'dist' folder minified + uglyfied and ready for deployment).
+3. **gulp build** (for distribution: creates a 'docs' folder minified + uglyfied and ready for deployment).
 
 I've put a lot of effort into this using the most recent coding and building techniques. The result on the browser is relatively simple, but there is actually a lot going on behind the scenes to output the files.
 
