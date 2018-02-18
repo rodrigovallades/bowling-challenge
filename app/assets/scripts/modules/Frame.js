@@ -94,10 +94,7 @@ class Frame{
     if (this.rolls.length > 1) {
       roll2String = this.isSpare() ? '/' : this.rolls[1]
     }
-
-
-
-
+    
     return `
       <div class="frames__frame ${this.isFinished() ? 'frames__frame--finished' : ''}">
         <div class="frames__frame__title">${this.id}</div>
