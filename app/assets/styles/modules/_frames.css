@@ -19,10 +19,11 @@
 
     &--finished {
       border-color: $mainAccent;
+      color: $mainFont;
     }
 
     &--finished > &__score {
-      color: $mainFont;
+      color: $mainAccent;
     }
 
     &__roll {
