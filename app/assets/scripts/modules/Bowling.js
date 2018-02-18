@@ -1,15 +1,17 @@
 import Frame from './Frame'
+import Pin from './Pin'
 
 class Bowling {
 
   constructor() {
     this.frames = []
+    this.pins = []
     this.remainingPins = 10
   }
 
   init() {
-    this.setFrames(this.createFrames())
     this.setFrames(this.createFrames(10))
+    this.setPins(this.createPins(10))
   }
 
   isFinished() {
@@ -18,12 +20,27 @@ class Bowling {
 
   roll() {
     if (this.isFinished()) return
-    let rollNumber = this.randomRoll(this.remainingPins)
+    const currentFrame = this.getCurrentFrame()
+    const rollNumber = this.randomRoll(this.remainingPins)
     this.remainingPins = this.frames[0].roll(rollNumber)
+
+    this.resetPins()
+    this.getPins().map((pin, i) => {
+      pin.setKnocked(i >= 10 - currentFrame.getRollsScore())
+    })
+
   }
 
   randomRoll(max) {
     return Math.floor(Math.random() * (max + 1))
+  }
+
+  getCurrentFrame() {
+    return this.getFrames().find(frame => frame.isCurrent())
+  }
+
+  resetPins() {
+    this.getPins().map(pin => pin.reset())
   }
 
   getRemaining() {
@@ -58,12 +75,29 @@ class Bowling {
     return frames
   }
 
+  createPins(num) {
+    let pins = [...Array(num)].map((pin, i) => {
+      pin = new Pin(i, false)
+      return pin
+    })
+
+    return pins
+  }
+
   setFrames(frames) {
     this.frames = frames
   }
 
+  setPins(pins) {
+    this.pins = pins
+  }
+
   getFrames() {
     return this.frames
+  }
+
+  getPins() {
+    return this.pins
   }
 
   reset() {
@@ -73,13 +107,18 @@ class Bowling {
 
   render() {
     const score = this.getScore().toString()
-    let framesHtml = ``
+    let framesHtml = ``,
+        pinsHtml = ``
 
-    this.frames.map(frame => framesHtml += frame.render())
+    this.getFrames().map(frame => framesHtml += frame.render())
+    this.getPins().map(pin => pinsHtml += pin.render())
 
     return `
       <div class='row'>
         <div class='frames'>${framesHtml}</div>
+      </div>
+      <div class='row'>
+        <div class='pins'>${pinsHtml}</div>
       </div>
       <div class='row row--centered'>
         <div class="total-score ${this.isFinished() ? 'total-score--finished' : ''}">Total score:<span class="total-score__number">${score}</span></div>

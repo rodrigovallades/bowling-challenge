@@ -1,0 +1,16 @@
+.pins {
+
+  .pins__pin {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    margin: 10px;
+
+    &--knocked {
+      opacity: 0.5
+    }
+
+  }
+
+}

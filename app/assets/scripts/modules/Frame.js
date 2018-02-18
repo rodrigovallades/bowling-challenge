@@ -10,44 +10,52 @@ class Frame{
   }
 
   getScore() {
-      return this.score
+    return this.score
+  }
+
+  getRollsScore() {
+    if (this.rolls.length) {
+      return this.rolls.reduce((a,b) => {
+        return a + b
+      });
+    }
   }
 
   setCurrent(bool) {
-      this.current = bool
-      return this
+    this.current = bool
+    return this
   }
 
   isCurrent() {
-      return this.current
+    return this.current
   }
 
   isLast() {
-      return this.next === null
+    return this.next === null
   }
 
   isFinished() {
-      return this.isStrike() || this.rolls.length === 2
+    return this.isStrike() || this.rolls.length === 2
   }
 
   isSpare() {
-      return this.rolls.length >= 2 && (this.rolls[0] + this.rolls[1]) === 10
+    return this.rolls.length >= 2 && (this.rolls[0] + this.rolls[1]) === 10
   }
 
   isStrike() {
-      return this.rolls.length >= 1 && this.rolls[0] === 10
+    return this.rolls.length >= 1 && this.rolls[0] === 10
   }
 
   getNext() {
-      return this.next
+    return this.next
   }
 
   setNext(frame) {
-      this.next = frame
+    this.next = frame
   }
 
   moveNext() {
-      this.setCurrent(false).getNext().setCurrent(true)
+    this.setCurrent(false).getNext().setCurrent(true)
   }
 
   roll(num) {
