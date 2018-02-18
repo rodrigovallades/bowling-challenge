@@ -1,5 +1,5 @@
 .btn {
-  background-color: $mainAccent;
+  background-color: $subtleGrey;
   color: #FFF;
   text-decoration: none;
   padding: .75rem 1.2rem;
@@ -8,6 +8,10 @@
   border-radius: 5px;
   cursor: pointer;
 
+  &--disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
   &--uppercase {
     text-transform: uppercase;
   }

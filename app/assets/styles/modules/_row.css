@@ -1,5 +1,8 @@
 .row {
 
   @mixin clearfix;
-  
+
+  &--centered {
+    text-align: center;
+  }
 }
