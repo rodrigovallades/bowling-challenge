@@ -70,7 +70,7 @@ class Bowling {
         <div class='frames'>${framesHtml}</div>
       </div>
       <div class='row'>
-        <div class="total-score">Total score <span class="total-score__number">${score}</span></p>
+        <div class="total-score">Total score <span class="total-score__number">${score}</span></div>
       </div>
     `
   }
