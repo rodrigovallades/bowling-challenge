@@ -111,7 +111,10 @@ class Bowling {
         pinsHtml = ``
 
     this.getFrames().map(frame => framesHtml += frame.render())
-    this.getPins().map(pin => pinsHtml += pin.render())
+    this.getPins().map((pin, i) => {
+      pinsHtml += pin.render()
+      if (i == 3 || i == 6 || i == 8) { pinsHtml += `<br>` }
+    })
 
     return `
       <div class='row'>
