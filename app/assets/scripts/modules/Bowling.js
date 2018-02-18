@@ -9,6 +9,7 @@ class Bowling {
 
   init() {
     this.setFrames(this.createFrames())
+    this.setFrames(this.createFrames(10))
   }
 
   isFinished() {
@@ -40,17 +41,17 @@ class Bowling {
     return score
   }
 
-  createFrames() {
-    let frames = [...Array(10)].map((frame, i) => {
+  createFrames(num) {
+    let frames = [...Array(num)].map((frame, i) => {
       frame = new Frame()
-      // initiate first frame as current
-      if (i === 0) frame.setCurrent(true)
-      frame.id = i+1
       return frame
     })
 
-    // the last frame doesn't have a 'next' element
     frames.map((frame, i) => {
+      frame.id = i+1
+      // initiate first frame as current
+      if (i === 0) frame.setCurrent(true)
+      // the last frame doesn't have a 'next' element
       if (i < frames.length-1) frame.setNext(frames[i+1])
     })
 

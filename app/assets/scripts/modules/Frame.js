@@ -63,7 +63,6 @@ class Frame{
     }
 
     this.score += num
-
     this.rolls.push(num)
 
     if (this.isFinished()) {
