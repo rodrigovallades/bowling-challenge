@@ -1,6 +1,7 @@
 # bowling-challenge
 
-Hey! Hope you like my solution.
+## Preview
+- https://rodrigovallades.github.io/bowling-challenge/index.html
 
 ## Techniques used
 
