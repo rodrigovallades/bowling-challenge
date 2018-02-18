@@ -66,8 +66,12 @@ class Bowling {
     this.frames.map(frame => framesHtml += frame.render())
 
     return `
-      <div class='frames'>${framesHtml}</div>
-      <p class="frame-total-score">Overall Score <span class="frame-total-score-figure">${score}</span></p>
+      <div class='row'>
+        <div class='frames'>${framesHtml}</div>
+      </div>
+      <div class='row'>
+        <div class="total-score">Total score <span class="total-score__number">${score}</span></p>
+      </div>
     `
   }
 
