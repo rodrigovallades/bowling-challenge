@@ -24,7 +24,7 @@
 
 ## About the build
 
-The build of this application was output by **Webpack + Babel + PostCSS + Gulp**:
+The build of this application was output by **Webpack + Babel + PostCSS + Gulp**.
 
 ## About this challenge
 
