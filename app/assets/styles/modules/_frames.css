@@ -16,6 +16,7 @@
     font-size: 1.2rem;
 
     &__title {
+      color: $subtleGrey;
       position: absolute;
       top: -40px;
       height: 30px;
@@ -28,13 +29,30 @@
       color: $subtleGrey;
     }
 
-    &--finished {
+    &--active &__roll--2 {
+      border-color: $mainAccent
+    }
+
+    &--active {
       border-color: $mainAccent;
+    }
+
+    &--active &__title {
+      color: $mainAccent;
+    }
+
+    &--finished,
+    &--finished &__roll--2  {
+      border-color: $darkGrey;
       color: $mainFont;
     }
 
-    &--finished > &__score {
+    &--finished &__score {
       color: $mainAccent;
+    }
+
+    &--finished &__title {
+      color: $darkGrey;
     }
 
     &__roll {
@@ -45,6 +63,19 @@
       width: 40px;
       height: 40px;
       top: 0;
+
+      &--active::before {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        top: 0;
+        left: 0;
+        position: absolute;
+        font-family: "Font Awesome 5 Free";
+        content: "\f436";
+        color: $mainAccent;
+      }
     }
 
     &__score {

@@ -94,12 +94,12 @@ class Frame{
     if (this.rolls.length > 1) {
       roll2String = this.isSpare() ? '/' : this.rolls[1]
     }
-    
+
     return `
-      <div class="frames__frame ${this.isFinished() ? 'frames__frame--finished' : ''}">
+      <div class="frames__frame${this.isCurrent() && !this.isFinished() ? ' frames__frame--active' : ''}${this.isFinished() ? ' frames__frame--finished' : ''}">
         <div class="frames__frame__title">${this.id}</div>
-        <div class="frames__frame__roll frames__frame__roll--1">${roll1String}</div>
-        <div class="frames__frame__roll frames__frame__roll--2">${roll2String}</div>
+        <div class="frames__frame__roll frames__frame__roll--1${this.isCurrent() && !this.isFinished() && this.rolls.length === 0 ? ' frames__frame__roll--active' : ''}">${roll1String}</div>
+        <div class="frames__frame__roll frames__frame__roll--2${this.isCurrent() && !this.isFinished() && this.rolls.length > 0 ? ' frames__frame__roll--active' : ''}"">${roll2String}</div>
         <div class="frames__frame__score">${scoreString}</div>
       </div>
     `

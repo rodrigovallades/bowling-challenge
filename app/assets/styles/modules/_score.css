@@ -14,9 +14,10 @@
     border-radius: $borderRadius;
   }
 
-  &--finished > &__number {
+  &--finished &__number {
     border-color: $mainAccent;
-    color: $mainAccent;
+    background-color: $mainAccent;
+    color: $verySubtleGrey;
   }
 
 }
