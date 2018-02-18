@@ -82,7 +82,9 @@ class Frame{
 
     let scoreString = this.score || '',
         roll1String = this.rolls[0] || '',
-        roll2String = this.rolls[1] || ''
+        roll2String = this.rolls[1] || '',
+        activeClass
+
 
     if (this.rolls.length > 0) {
       roll1String = this.isStrike() ? 'X' : this.rolls[0]
@@ -92,8 +94,11 @@ class Frame{
       roll2String = this.isSpare() ? '/' : this.rolls[1]
     }
 
+
+
+
     return `
-      <div class="frames__frame">
+      <div class="frames__frame ${this.isFinished() ? 'frames__frame--finished' : ''}">
         <div class="frames__frame__roll frames__frame__roll--1">${roll1String}</div>
         <div class="frames__frame__roll frames__frame__roll--2">${roll2String}</div>
         <div class="frames__frame__score">${scoreString}</div>
