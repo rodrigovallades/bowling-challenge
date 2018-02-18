@@ -6,7 +6,7 @@
   display: inline-block;
   border: 1px solid transparent;
   border-radius: 5px;
-
+  cursor: pointer;
 
   &--uppercase {
     text-transform: uppercase;

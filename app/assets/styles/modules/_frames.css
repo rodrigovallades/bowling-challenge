@@ -1,42 +1,62 @@
 .frames {
   text-align: center;
-
+  font-size: 0;
 
   &__frame {
-    width: 70px;
-    height: 70px;
-    float: left;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
     position: relative;
-    border: 1px solid black;
+    border: 1px solid $subtleGrey;
+    background-color: #fff;
     margin-right: 10px;
     border-radius: 5px;
+    font-size: 1.2rem;
+
+    &__score {
+      color: $subtleGrey;
+    }
+
+    &--finished {
+      border-color: $mainAccent;
+    }
+
+    &--finished > &__score {
+      color: $mainFont;
+    }
+
+    &__roll {
+      text-align: center;
+      line-height: 40px;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 0;
+    }
+
+    &__score {
+      text-align: center;
+        line-height: 40px;
+      position: absolute;
+      width: 100%;
+      height: 40px;
+      bottom: 0;
+    }
+
+    &__roll--1 {
+      left: 0;
+    }
+
+    &__roll--2 {
+      right: 0;
+      border-left: 1px solid $subtleGrey;
+      border-bottom: 1px solid $subtleGrey;
+    }
+
   }
+
   &__frame:last-child {
     margin-right: 0;
   }
-  &__frame__roll {
-    text-align: center;
-    line-height: 35px;
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    top: 0;
-  }
-  &__frame__score {
-    text-align: center;
-    line-height: 35px;
-    position: absolute;
-    width: 70px;
-    height: 35px;
-    bottom: 0;
-  }
 
-  &__frame__roll--1 {
-    left: 0;
-  }
-  &__frame__roll--2 {
-    right: 0;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-  }
 }
