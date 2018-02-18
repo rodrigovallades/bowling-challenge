@@ -11,7 +11,7 @@
     width: 50px;
     background-color: $lightFrame;
     border: 1px solid $subtleGrey;
-    border-radius: 5px;
+    border-radius: $borderRadius;
   }
 
   &--finished > &__number {
