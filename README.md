@@ -16,12 +16,14 @@
 ## Development setup
 
 1. **npm install** (download dependencies);
-2. **gulp watch** (creates a 'temp' folder and auto-starts Browsersync on localhost:3000);
+2. **npm install -g gulp** (if you don't have Gulp installed globally);
+3. **gulp watch** (creates a 'temp' folder and auto-starts Browsersync on localhost:3000);
 
 ## How to build for production
 
 1. **npm install** (download dependencies);
-2. **gulp build** (creates a 'docs' folder minified + uglyfied and ready for deployment).
+2. **npm install -g gulp** (if you don't have Gulp installed globally);
+3. **gulp build** (creates a 'docs' folder minified + uglyfied and ready for deployment).
 
 ## About the build
 
