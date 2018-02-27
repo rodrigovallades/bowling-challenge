@@ -2,7 +2,6 @@ body {
   font-family: 'Nunito', sans-serif;
   color: $mainFont;
   background-color: $verySubtleGrey;
-  padding-bottom: 20px;
 }
 
 * {

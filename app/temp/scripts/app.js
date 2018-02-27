@@ -262,7 +262,7 @@
 	        }
 	      });
 
-	      return '\n      <div class=\'row\'>\n        <div class=\'frames\'>' + framesHtml + '</div>\n      </div>\n      <div class=\'row\'>\n        <div class=\'pins\'>' + pinsHtml + '</div>\n      </div>\n      <div class=\'row row--centered\'>\n        <div class="total-score ' + (this.isFinished() ? 'total-score--finished' : '') + '">Total score:<span class="total-score__number">' + score + '</span></div>\n      </div>\n    ';
+	      return '\n      <div class=\'frames\'>' + framesHtml + '</div>\n      <div class=\'pins\'>' + pinsHtml + '</div>\n      <div class="total-score' + (this.isFinished() ? ' total-score--finished' : '') + '">Total score:<span class="total-score__number">' + score + '</span></div>      \n    ';
 	    }
 	  }]);
 
