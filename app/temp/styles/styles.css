@@ -437,8 +437,8 @@ a {
 
 .app {
   display: -ms-flexbox;
-  display: flex;  
-  -ms-flex-direction: column;  
+  display: flex;
+  -ms-flex-direction: column;
       flex-direction: column;
 }
 
@@ -456,7 +456,6 @@ a {
 }
 
 .bowling--controls {
-  padding-bottom: 20px;
   -ms-flex-order: -2;
       order: -2;
 }
@@ -464,6 +463,7 @@ a {
 @media (min-width: 500px) {
 
   .bowling--controls {
+    padding-bottom: 20px;
     -ms-flex-order: 0;
         order: 0;
   }
@@ -521,12 +521,20 @@ a {
 
 .wrapper {
   overflow: hidden;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 12px;
+  padding-right: 12px;
   max-width: 1236px;
   margin-left: auto;
   margin-right: auto;
 
+}
+
+@media (min-width: 930px) {
+
+  .wrapper {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 .wrapper--medium {
@@ -591,7 +599,6 @@ a {
 
 .frames {
   font-size: 0;
-  margin-top: 20px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -606,6 +613,7 @@ a {
 @media (min-width: 500px) {
 
   .frames {
+    margin-top: 20px;
     background-color: transparent;
     -ms-flex-pack: justify;
         justify-content: space-between;
@@ -623,33 +631,43 @@ a {
 
 .frames__frame {
   text-align: center;
-  -ms-flex: 0 0 80px;
-      flex: 0 0 80px;
-  height: 80px;
+  -ms-flex: 0 0 60px;
+      flex: 0 0 60px;
+  height: 60px;
   position: relative;
   border: 1px solid #bbb;
   background-color: #fff;
   border-radius: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 40px 5px 0 5px;
 }
 
 @media (min-width: 500px) {
 
   .frames__frame {
-    margin-left: 0;
-    margin-right: 0;
+    font-size: 1.2rem;
+    -ms-flex: 0 0 80px;
+        flex: 0 0 80px;
+    height: 80px;
+    margin: 50px 0 0 0;
   }
 }
 
 .frames__frame__title {
   color: #bbb;
   position: absolute;
-  top: -40px;
+  top: -30px;
   height: 30px;
   line-height: 30px;
   left: 0;
   right: 0;
+}
+
+@media (min-width: 500px) {
+
+  .frames__frame__title {
+    top: -40px;
+  }
 }
 
 .frames__frame__score {
@@ -685,18 +703,26 @@ a {
 .frames__frame__roll {
   border-radius: 0 0 0 5px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
+  height: 30px;
   position: absolute;
   width: 50%;
-  height: 40px;
   top: 0;
 }
 
+@media (min-width: 500px) {
+
+  .frames__frame__roll {
+    line-height: 40px;
+    height: 40px;
+  }
+}
+
 .frames__frame__roll--active::before {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   width: 100%;
-  height: 40px;
-  line-height: 40px;
+  height: 30px;
+  line-height: 30px;
   top: 0;
   left: 0;
   position: absolute;
@@ -705,13 +731,30 @@ a {
   color: #17a2b8;
 }
 
+@media (min-width: 500px) {
+
+  .frames__frame__roll--active::before {
+    font-size: 1.5rem;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
 .frames__frame__score {
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
+  height: 30px;
   position: absolute;
   width: 100%;
-  height: 40px;
   bottom: 0;
+}
+
+@media (min-width: 500px) {
+
+  .frames__frame__score {
+    line-height: 40px;
+    height: 40px;
+  }
 }
 
 .frames__frame__roll--1 {
@@ -732,11 +775,20 @@ a {
 
 .pins .pins__pin {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   background-color: #17a2b8;
-  margin: 10px 10px 0 10px;
+  margin: 5px 7px 0 7px;
   border-radius: 10px;
+}
+
+@media (min-width: 500px) {
+
+  .pins .pins__pin {
+    margin: 6px 8px 0 8px;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .pins .pins__pin--knocked {
@@ -744,10 +796,17 @@ a {
 }
 
 .total-score {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 3.5em;
   text-align: center;
 
+}
+
+@media (min-width: 500px) {
+
+  .total-score {
+    font-size: 1.5rem;
+  }
 }
 
 .total-score__number {
@@ -770,7 +829,7 @@ a {
 
 .alert {
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   border: 1px solid transparent;
   border-radius: 5px;
   font-size: 0.90rem;
@@ -801,15 +860,16 @@ a {
 }
 
 .headline {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 300;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 930px) {
 
   .headline {
     font-size: 1.9rem;
+    margin: 1.5rem 0;
   }
 }
 

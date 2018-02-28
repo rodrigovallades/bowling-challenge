@@ -1,5 +1,5 @@
 .app {
-  display: flex;  
+  display: flex;
   flex-direction: column;
 }
 
@@ -14,10 +14,10 @@
 .bowling {
 
   &--controls {
-    padding-bottom: 20px;
     order: -2;
 
     @mixin atSmall {
+      padding-bottom: 20px;
       order: 0;
     }
   }
