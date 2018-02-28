@@ -425,7 +425,6 @@ body {
   font-family: 'Nunito', sans-serif;
   color: #333;
   background-color: #eee;
-  padding-bottom: 20px;
 }
 
 * {
@@ -434,6 +433,40 @@ body {
 
 a {
   color: #17a2b8;
+}
+
+.app {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+#bowling {
+  -ms-flex-order: -1;
+      order: -1;
+}
+
+@media (min-width: 500px) {
+
+  #bowling {
+    -ms-flex-order: 0;
+        order: 0;
+  }
+}
+
+.bowling--controls {
+  -ms-flex-order: -2;
+      order: -2;
+}
+
+@media (min-width: 500px) {
+
+  .bowling--controls {
+    padding-bottom: 20px;
+    -ms-flex-order: 0;
+        order: 0;
+  }
 }
 
 .btn {
@@ -479,7 +512,7 @@ a {
   padding: 1.1rem 1.9rem;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 500px) {
 
   .btn--large {
     font-size: 1.25rem;
@@ -488,12 +521,20 @@ a {
 
 .wrapper {
   overflow: hidden;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 12px;
+  padding-right: 12px;
   max-width: 1236px;
   margin-left: auto;
   margin-right: auto;
 
+}
+
+@media (min-width: 930px) {
+
+  .wrapper {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
 
 .wrapper--medium {
@@ -509,7 +550,7 @@ a {
   padding-right: 0;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 930px) {
 
   .wrapper--no-padding-until-medium {
     padding-left: 18px;
@@ -539,7 +580,7 @@ a {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 500px) {
 
   .wrapper--b-margin {
     margin-bottom: 3.875rem;
@@ -557,33 +598,76 @@ a {
 }
 
 .frames {
-  text-align: center;
   font-size: 0;
-  margin-top: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
 }
 
+@media (min-width: 500px) {
+
+  .frames {
+    margin-top: 20px;
+    background-color: transparent;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 930px) {
+
+  .frames {
+    max-width: 100%;
+  }
+}
+
 .frames__frame {
-  width: 80px;
-  height: 80px;
-  display: inline-block;
+  text-align: center;
+  -ms-flex: 0 0 60px;
+      flex: 0 0 60px;
+  height: 60px;
   position: relative;
   border: 1px solid #bbb;
   background-color: #fff;
-  margin-right: 10px;
-  margin-top: 40px;
   border-radius: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  margin: 40px 5px 0 5px;
+}
+
+@media (min-width: 500px) {
+
+  .frames__frame {
+    font-size: 1.2rem;
+    -ms-flex: 0 0 80px;
+        flex: 0 0 80px;
+    height: 80px;
+    margin: 50px 0 0 0;
+  }
 }
 
 .frames__frame__title {
   color: #bbb;
   position: absolute;
-  top: -40px;
+  top: -30px;
   height: 30px;
   line-height: 30px;
   left: 0;
   right: 0;
+}
+
+@media (min-width: 500px) {
+
+  .frames__frame__title {
+    top: -40px;
+  }
 }
 
 .frames__frame__score {
@@ -619,18 +703,26 @@ a {
 .frames__frame__roll {
   border-radius: 0 0 0 5px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
+  height: 30px;
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 50%;
   top: 0;
 }
 
+@media (min-width: 500px) {
+
+  .frames__frame__roll {
+    line-height: 40px;
+    height: 40px;
+  }
+}
+
 .frames__frame__roll--active::before {
-  font-size: 1.5rem;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
   top: 0;
   left: 0;
   position: absolute;
@@ -639,13 +731,30 @@ a {
   color: #17a2b8;
 }
 
+@media (min-width: 500px) {
+
+  .frames__frame__roll--active::before {
+    font-size: 1.5rem;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
 .frames__frame__score {
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
+  height: 30px;
   position: absolute;
   width: 100%;
-  height: 40px;
   bottom: 0;
+}
+
+@media (min-width: 500px) {
+
+  .frames__frame__score {
+    line-height: 40px;
+    height: 40px;
+  }
 }
 
 .frames__frame__roll--1 {
@@ -658,10 +767,6 @@ a {
   border-bottom: 1px solid #bbb;
 }
 
-.frames__frame:last-child {
-  margin-right: 0;
-}
-
 .pins {
   text-align: center;
   padding: 1rem 0 0 0;
@@ -670,11 +775,20 @@ a {
 
 .pins .pins__pin {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   background-color: #17a2b8;
-  margin: 10px 10px 0 10px;
+  margin: 5px 7px 0 7px;
   border-radius: 10px;
+}
+
+@media (min-width: 500px) {
+
+  .pins .pins__pin {
+    margin: 6px 8px 0 8px;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .pins .pins__pin--knocked {
@@ -682,9 +796,17 @@ a {
 }
 
 .total-score {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 3.5em;
+  text-align: center;
 
+}
+
+@media (min-width: 500px) {
+
+  .total-score {
+    font-size: 1.5rem;
+  }
 }
 
 .total-score__number {
@@ -707,7 +829,7 @@ a {
 
 .alert {
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   border: 1px solid transparent;
   border-radius: 5px;
   font-size: 0.90rem;
@@ -738,9 +860,17 @@ a {
 }
 
 .headline {
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   font-weight: 300;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
+}
+
+@media (min-width: 930px) {
+
+  .headline {
+    font-size: 1.9rem;
+    margin: 1.5rem 0;
+  }
 }
 
 .headline--centered {

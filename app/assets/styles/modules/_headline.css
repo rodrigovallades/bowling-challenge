@@ -1,7 +1,12 @@
 .headline {
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   font-weight: 300;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
+
+  @mixin atMedium {
+    font-size: 1.9rem;
+    margin: 1.5rem 0;
+  }
 
   &--centered {
     text-align: center;

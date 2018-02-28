@@ -117,15 +117,9 @@ class Bowling {
     })
 
     return `
-      <div class='row'>
-        <div class='frames'>${framesHtml}</div>
-      </div>
-      <div class='row'>
-        <div class='pins'>${pinsHtml}</div>
-      </div>
-      <div class='row row--centered'>
-        <div class="total-score ${this.isFinished() ? 'total-score--finished' : ''}">Total score:<span class="total-score__number">${score}</span></div>
-      </div>
+      <div class='frames'>${framesHtml}</div>
+      <div class='pins'>${pinsHtml}</div>
+      <div class="total-score${this.isFinished() ? ' total-score--finished' : ''}">Total score:<span class="total-score__number">${score}</span></div>      
     `
   }
 

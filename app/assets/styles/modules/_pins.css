@@ -4,11 +4,17 @@
 
   .pins__pin {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     background-color: $mainAccent;
-    margin: 10px 10px 0 10px;
+    margin: 5px 7px 0 7px;
     border-radius: $pinRadius;
+
+    @mixin atSmall {
+      margin: 6px 8px 0 8px;
+      width: 20px;
+      height: 20px;
+    }
 
     &--knocked {
       background-color: $subtleGrey;
