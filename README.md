@@ -7,17 +7,21 @@
 
 - ES6 + Babel: modules, classes and constructors, template strings, spread operator, arrow functions;
 - PostCSS: mixins, variables, imports, nesting;
-- BEM: CSS naming is following (block__element--modifier) pattern.
-- Development: Browsersync for hot-reloading
-- Build: Webpack + Gulp + Babel + PostCSS
+- Build: Webpack + Gulp + Babel + PostCSS;
 - No Bootstrap used!
 - No jQuery used!
+
+## Techniques used
+
+- BEM: CSS naming is following (block__element--modifier) pattern;
+- Mobile first approach: the layout, the dimensions and the font sizes are primarily set for mobile screens and then inscreased as needed for bigger screens;
+- Development: Browsersync with hot-reloading on localhost:3000.
 
 ## Development setup
 
 1. **npm install** (download dependencies);
 2. **npm install -g gulp** (if you don't have Gulp installed globally);
-3. **gulp watch** (creates a 'temp' folder and auto-starts Browsersync on localhost:3000);
+3. **gulp watch** (creates a 'temp' folder and auto-starts Browsersync with hot-reloading on localhost:3000).
 
 ## How to build for production
 
