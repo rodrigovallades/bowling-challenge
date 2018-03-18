@@ -2,6 +2,10 @@
   "name": "bowling-challenge",
   "version": "1.0.0",
   "description": "",
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp build"
+  },
   "dependencies": {
     "normalize.css": "^4.1.1"
   },
@@ -18,7 +22,7 @@
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
-    "gulp-rev": "^7.1.2",    
+    "gulp-rev": "^7.1.2",
     "gulp-uglify": "^2.0.0",
     "gulp-usemin": "^0.3.23",
     "gulp-watch": "^4.3.5",
